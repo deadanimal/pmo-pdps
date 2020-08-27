@@ -1,0 +1,106 @@
+<nav class="navbar navbar-main navbar-expand-lg navbar-dark headroom bg-primary" id="navbar-main">
+	<div class="container">
+		<a class="navbar-brand mr-lg-5" [routerLink]="['/home']">
+			<img src="assets/img/logo/jata_negara.png" id="brand-logo" />
+		</a>
+		<button aria-controls="navbar_global" aria-label="Toggle navigation" class="navbar-toggler"
+			[attr.aria-expanded]="!isCollapsed" (click)="isCollapsed = !isCollapsed" id="navbar_global" type="button">
+			<span class="navbar-toggler-icon"> </span>
+		</button>
+		<div class="navbar-collapse" [isAnimated]="true" [collapse]="isCollapsed" id="navbar_global">
+			<div class="navbar-collapse-header">
+				<div class="row">
+					<div class="col-6 collapse-brand">
+						<a [routerLink]="['/index']">
+							<img src="assets/img/brand/blue.png" />
+						</a>
+					</div>
+					<div class="col-6 collapse-close">
+						<button aria-controls="navbar_global" aria-label="Toggle navigation" class="navbar-toggler"
+							[attr.aria-expanded]="!isCollapsed" (click)="isCollapsed = !isCollapsed" id="navbar_global"
+							type="button">
+							<span> </span> <span> </span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<ul class="navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto">
+				<li class="nav-item">
+					<a class="nav-link cursor-pointer" [routerLink]="['/home']"> Home </a>
+				</li>
+
+				<li class="nav-item dropdown">
+					<a class="nav-link" data-toggle="dropdown" href="javascript:;" role="button">
+						<i class="ni ni-app d-lg-none"> </i>
+						<span class="nav-link-inner--text"> Agency </span>
+					</a>
+					<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
+						<a class="dropdown-item" [routerLink]="['/agency/programs']">
+							<i class="ni ni-align-left-2 text-primary"> </i> Programs
+						</a>
+						<a class="dropdown-item" [routerLink]="['/agency/program-add']">
+							<i class="ni ni-align-left-2 text-primary"> </i> Add Program
+						</a>
+						<!-- <a class="dropdown-item" [routerLink]="['/agency/program-info']">
+							<i class="ni ni-align-left-2 text-primary"> </i> Program Info
+						</a> -->
+						<!-- <a class="dropdown-item" [routerLink]="['/agency/profile']">
+							<i class="ni ni-align-left-2 text-primary"> </i> Profile
+						</a> -->
+						<a class="dropdown-item" [routerLink]="['/agency/banner']">
+							<i class="ni ni-align-left-2 text-primary"> </i> Update Requests
+						</a>
+						<a class="dropdown-item" [routerLink]="['/agency/banner-request']">
+							<i class="ni ni-align-left-2 text-primary"> </i> Create Update Request
+						</a>
+						<a class="dropdown-item" [routerLink]="['/agency/report']">
+							<i class="ni ni-align-left-2 text-primary"> </i> Report
+						</a>
+						<a class="dropdown-item" [routerLink]="['/agency/request-data']">
+							<i class="ni ni-align-left-2 text-primary"> </i> Request Data
+						</a>
+						<a class="dropdown-item" [routerLink]="['/agency/requested-data']">
+							<i class="ni ni-align-left-2 text-primary"> </i> Requested Data List
+						</a>
+						<a class="dropdown-item" [routerLink]="['/agency/search-individual-profile']">
+							<i class="ni ni-align-left-2 text-primary"> </i> Search Individual Profile
+						</a>
+					</div>
+				</li>
+
+				<li class="nav-item dropdown">
+					<a class="nav-link" data-toggle="dropdown" href="javascript:;" role="button">
+						<i class="ni ni-single-copy-04 d-lg-none"> </i>
+						<span class="nav-link-inner--text"> Admin </span>
+					</a>
+					<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
+						<a class="dropdown-item" [routerLink]="['/admin/program']">
+							<i class="ni ni-align-center text-info"> </i> Program
+						</a>
+						<!-- <a class="dropdown-item" [routerLink]="['/admin/profile']">
+							<i class="ni ni-align-center text-info"> </i> Profile
+						</a> -->
+						<a class="dropdown-item" [routerLink]="['/admin/banner']">
+							<i class="ni ni-align-center text-info"> </i> Banner
+						</a>
+						<!-- <a class="dropdown-item" [routerLink]="['/admin/report']">
+							<i class="ni ni-align-center text-info"> </i> Report
+						</a> -->
+						<a class="dropdown-item" [routerLink]="['/admin/request-data']">
+							<i class="ni ni-align-center text-info"> </i> Request Data
+						</a>
+						<a class="dropdown-item" [routerLink]="['/admin/user-management']">
+							<i class="ni ni-align-center text-info"> </i> User Management
+						</a>
+						<a class="dropdown-item" [routerLink]="['/admin/user']">
+							<i class="ni ni-align-center text-info"> </i> User
+						</a>
+						<a class="dropdown-item" [routerLink]="['/admin/user-add']">
+							<i class="ni ni-align-center text-info"> </i> Add User
+						</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
