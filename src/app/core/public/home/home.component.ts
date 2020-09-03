@@ -1,15 +1,88 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, TemplateRef } from "@angular/core";
+import { BsModalRef, BsModalService } from "ngx-bootstrap";
+import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: "app-home",
+  templateUrl: "./home.component.html",
+  styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent implements OnInit {
+  // Modal
+  modal: BsModalRef;
+  modalConfig = {
+    keyboard: true,
+    class: "modal-dialog-centered gray modal-lg",
+  };
+  @ViewChild("addModal", { static: true }) modalTemplate: TemplateRef<any>;
 
-  constructor() { }
+  genderShow: boolean = false;
+  buttonShow: boolean = false;
+  programShow: boolean = false;
+  dashProgKanakShow: boolean = false;
+  dashProgRemajaShow: boolean = false;
+  dashProgWargaShow: boolean = false;
 
-  ngOnInit(): void {
+  constructor(
+    private modalService: BsModalService,
+    private router: Router,
+    private _route: ActivatedRoute
+  ) {}
+
+  ngOnInit() {
+    this.openModal(this.modalTemplate, undefined);
   }
 
+  openModal(modalRef: TemplateRef<any>, row) {
+    // if (row) {
+    //   console.log(row);
+    //   this.editActionForm.patchValue(row);
+    // }
+    // this.modal = this.modalService.show(
+    //   modalRef,
+    //   Object.assign({}, { class: "gray modal-xl" })
+    // );
+    this.modal = this.modalService.show(modalRef, this.modalConfig);
+  }
+
+  closeModal() {
+    this.modal.hide();
+    // this.editActionForm.reset();
+  }
+
+  agediv() {
+    this.genderShow = true;
+  }
+
+  genderdiv() {
+    this.buttonShow = true;
+  }
+
+  programdiv() {
+    this.programShow = true;
+  }
+
+  dashProgdiv(para) {
+    if (para == "k") {
+      this.dashProgKanakShow = true;
+      this.dashProgWargaShow = false;
+      this.dashProgRemajaShow = false;
+    } else if (para == "r") {
+      this.dashProgRemajaShow = true;
+      this.dashProgKanakShow = false;
+      this.dashProgWargaShow = false;
+    } else if (para == "w") {
+      this.dashProgWargaShow = true;
+      this.dashProgRemajaShow = false;
+      this.dashProgKanakShow = false;
+    }
+  }
+
+  navigatePage(path: String) {
+    // let qq = "db17a36a-1da6-4919-9746-dfed8802ec9d";
+    if (path == "agency/programs") {
+      this.closeModal();
+      return this.router.navigate([path]);
+    }
+  }
 }
