@@ -48,7 +48,7 @@
       <ul class="navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto">
         <li class="nav-item">
           <a class="nav-link cursor-pointer" [routerLink]="['/home']">
-            Halaman Utama
+            Utama
           </a>
         </li>
 
@@ -67,57 +67,117 @@
               <i class="ni ni-align-left-2 text-primary"> </i> Program
             </a>
             <a class="dropdown-item">
+              <ul
+                class="navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto"
+              >
+                <li class="nav-item">
+                  <a class="nav-link cursor-pointer" [routerLink]="['/home']">
+                    Utama
+                  </a>
+                </li>
+              </ul>
+            </a>
+            <a class="dropdown-item">
+              <i class="ni ni-align-left-2 text-primary"> </i> MySPC
+            </a>
+            <a class="dropdown-item">
               <i class="ni ni-align-left-2 text-primary"> </i> Agensi
               Perlindungan Sosial
             </a>
-            <!-- <a class="dropdown-item" [routerLink]="['/agency/banner']">
-					<i class="ni ni-align-left-2 text-primary"> </i> Update Requests
-				</a>
-				<a class="dropdown-item" [routerLink]="['/agency/banner-request']">
-					<i class="ni ni-align-left-2 text-primary"> </i> Create Update Request
-				</a>
-				<a class="dropdown-item" [routerLink]="['/agency/report']">
-					<i class="ni ni-align-left-2 text-primary"> </i> Report
-				</a>
-				<a class="dropdown-item" [routerLink]="['/agency/request-data']">
-					<i class="ni ni-align-left-2 text-primary"> </i> Request Data
-				</a>
-				<a class="dropdown-item" [routerLink]="['/agency/requested-data']">
-					<i class="ni ni-align-left-2 text-primary"> </i> Requested Data List
-				</a>
-				<a class="dropdown-item" [routerLink]="['/agency/search-individual-profile']">
-					<i class="ni ni-align-left-2 text-primary"> </i> Search Individual Profile
-				</a> -->
+            <a class="dropdown-item" [routerLink]="['/agency/banner']">
+              <i class="ni ni-align-left-2 text-primary"> </i> Update Requests
+            </a>
+            <a class="dropdown-item" [routerLink]="['/agency/banner-request']">
+              <i class="ni ni-align-left-2 text-primary"> </i> Create Update
+              Request
+            </a>
+            <a class="dropdown-item" [routerLink]="['/agency/report']">
+              <i class="ni ni-align-left-2 text-primary"> </i> Report
+            </a>
+            <a class="dropdown-item" [routerLink]="['/agency/request-data']">
+              <i class="ni ni-align-left-2 text-primary"> </i> Request Data
+            </a>
+            <a class="dropdown-item" [routerLink]="['/agency/requested-data']">
+              <i class="ni ni-align-left-2 text-primary"> </i> Requested Data
+              List
+            </a>
+            <a
+              class="dropdown-item"
+              [routerLink]="['/agency/search-individual-profile']"
+            >
+              <i class="ni ni-align-left-2 text-primary"> </i> Search Individual
+              Profile
+            </a>
           </div>
         </li>
 
         <li class="nav-item dropdown">
-          <!-- <a class="nav-link" data-toggle="dropdown" href="javascript:;" role="button">
-						<i class="ni ni-single-copy-04 d-lg-none"> </i>
-						<span class="nav-link-inner--text"> Admin </span>
-					</a>
-					<div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
-						<a class="dropdown-item" [routerLink]="['/admin/program']">
-							<i class="ni ni-align-center text-info"> </i> Program
-						</a>
-						<a class="dropdown-item" [routerLink]="['/admin/banner']">
-							<i class="ni ni-align-center text-info"> </i> Banner
-						</a>
-						<a class="dropdown-item" [routerLink]="['/admin/request-data']">
-							<i class="ni ni-align-center text-info"> </i> Request Data
-						</a>
-						<a class="dropdown-item" [routerLink]="['/admin/user-management']">
-							<i class="ni ni-align-center text-info"> </i> User Management
-						</a>
-						<a class="dropdown-item" [routerLink]="['/admin/user']">
-							<i class="ni ni-align-center text-info"> </i> User
-						</a>
-						<a class="dropdown-item" [routerLink]="['/admin/user-add']">
-							<i class="ni ni-align-center text-info"> </i> Add User
-						</a>
-					</div> -->
+          <a
+            class="nav-link"
+            data-toggle="dropdown"
+            href="javascript:;"
+            role="button"
+          >
+            <i class="ni ni-single-copy-04 d-lg-none"> </i>
+            <span class="nav-link-inner--text"> Admin </span>
+          </a>
+          <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
+            <a class="dropdown-item" [routerLink]="['/admin/program']">
+              <i class="ni ni-align-center text-info"> </i> Program
+            </a>
+            <a class="dropdown-item" [routerLink]="['/admin/banner']">
+              <i class="ni ni-align-center text-info"> </i> Banner
+            </a>
+            <a class="dropdown-item" [routerLink]="['/admin/request-data']">
+              <i class="ni ni-align-center text-info"> </i> Request Data
+            </a>
+            <a class="dropdown-item" [routerLink]="['/admin/user-management']">
+              <i class="ni ni-align-center text-info"> </i> User Management
+            </a>
+            <a class="dropdown-item" [routerLink]="['/admin/user']">
+              <i class="ni ni-align-center text-info"> </i> User
+            </a>
+            <a class="dropdown-item" [routerLink]="['/admin/user-add']">
+              <i class="ni ni-align-center text-info"> </i> Add User
+            </a>
+          </div>
         </li>
       </ul>
     </div>
   </div>
 </nav>
+
+<!-- <div class="page-header" style="padding-top: 0vh !important"> -->
+<div class="container" style="padding-top: 13vh !important">
+  <div class="row align-items-center text-left">
+    <div class="col-lg-5 col-12">
+      <h1 class="display-3">
+        Akses kepada<span class="text-primary">Maklumat PDPS program </span>
+      </h1>
+      <p class="lead pb-4">
+        Kami berhasrat untuk fokus dalam membina hubungan dengan masyarakat.
+      </p>
+      <div class="row row-input">
+        <div class="col-sm-8 col-12">
+          <input
+            aria-label="Email Anda"
+            class="form-control"
+            id="signupSrEmail"
+            name="email"
+            placeholder="Email Anda"
+            type="email"
+          />
+        </div>
+        <div class="col-sm-4 col-12 pl-lg-0">
+          <button class="btn btn-primary btn-block" type="submit">
+            Langgan
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-7 col-12 pl-0">
+      <img class="ml-lg-5" src="assets/img/ill/bg6-2.svg" width="100%" />
+    </div>
+  </div>
+</div>
+<!-- </div> -->
