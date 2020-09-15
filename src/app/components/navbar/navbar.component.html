@@ -45,14 +45,14 @@
           </div>
         </div>
       </div>
-      <ul class="navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto">
-        <li class="nav-item">
+      <!-- <ul class="navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto"> -->
+      <!-- <li class="nav-item">
           <a class="nav-link cursor-pointer" [routerLink]="['/home']">
             Utama
           </a>
-        </li>
+        </li> -->
 
-        <li class="nav-item dropdown">
+      <!-- <li class="nav-item dropdown">
           <a
             class="nav-link"
             data-toggle="dropdown"
@@ -65,17 +65,6 @@
           <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
             <a class="dropdown-item" [routerLink]="['/agency/programs']">
               <i class="ni ni-align-left-2 text-primary"> </i> Program
-            </a>
-            <a class="dropdown-item">
-              <ul
-                class="navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto"
-              >
-                <li class="nav-item">
-                  <a class="nav-link cursor-pointer" [routerLink]="['/home']">
-                    Utama
-                  </a>
-                </li>
-              </ul>
             </a>
             <a class="dropdown-item">
               <i class="ni ni-align-left-2 text-primary"> </i> MySPC
@@ -109,9 +98,9 @@
               Profile
             </a>
           </div>
-        </li>
+        </li> -->
 
-        <li class="nav-item dropdown">
+      <!-- <li class="nav-item dropdown">
           <a
             class="nav-link"
             data-toggle="dropdown"
@@ -141,6 +130,193 @@
               <i class="ni ni-align-center text-info"> </i> Add User
             </a>
           </div>
+        </li>
+      </ul> -->
+      <ul
+        id="menu"
+        class="navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto"
+      >
+        <li
+          class="parent cursor-pointer"
+          style="color: white"
+          [routerLink]="['/home']"
+        >
+          Utama
+        </li>
+
+        <li class="parent">
+          <a href="#"> MySPC </a>
+
+          <!-- <a href="#">Fun Puzzle<span class="expand">»</span></a> -->
+          <ul class="child">
+            <li>
+              <a href="#" nowrap
+                ><i class="ni ni-align-left-2 text-primary"> </i> Perutusan
+                Pengurusi</a
+              >
+            </li>
+            <li>
+              <a href="#" nowrap
+                ><i class="ni ni-align-left-2 text-primary"> </i> Latar
+                Belakang</a
+              >
+            </li>
+            <li>
+              <a href="#" nowrap
+                ><i class="ni ni-align-left-2 text-primary"> </i> Struktur</a
+              >
+            </li>
+
+            <li class="parent">
+              <a href="#"
+                ><i class="ni ni-align-left-2 text-primary"> </i> Jawatan Kuasa
+                Kerja<span class="expand">»</span></a
+              >
+              <ul class="child">
+                <li class="parent">
+                  <a href="#">Bantuan Sosial<span class="expand">»</span></a>
+                  <ul class="child">
+                    <li>
+                      <a href="#" nowrap
+                        ><i class="ni ni-align-left-2 text-primary"> </i>
+                        Objektif</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" nowrap
+                        ><i class="ni ni-align-left-2 text-primary"> </i>
+                        Skop</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" nowrap
+                        ><i class="ni ni-align-left-2 text-primary"> </i>
+                        Ahli</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#" nowrap
+                    ><i class="ni ni-align-left-2 text-primary"> </i> Insurans
+                    Sosial</a
+                  >
+                </li>
+                <li>
+                  <a href="#" nowrap
+                    ><i class="ni ni-align-left-2 text-primary"> </i> Intervensi
+                    Pasaran Buruh</a
+                  >
+                </li>
+                <li>
+                  <a href="#" nowrap
+                    ><i class="ni ni-align-left-2 text-primary"> </i> Pengurusan
+                    Data</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" nowrap
+                ><i class="ni ni-align-left-2 text-primary"> </i>Siaran Media</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li class="parent">
+          <a href="#">Perlindungan Sosial </a>
+          <ul class="child">
+            <li>
+              <a>
+                <i class="ni ni-align-left-2 text-primary"> </i> Perlindungan
+                Sosial di Malaysia
+              </a>
+            </li>
+            <li>
+              <a> <i class="ni ni-align-left-2 text-primary"> </i> PDPS </a>
+            </li>
+            <li>
+              <a>
+                <i class="ni ni-align-left-2 text-primary"> </i> Senarai Agensi
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="parent">
+          <a href="#">Admin</a>
+          <ul class="child">
+            <li>
+              <a [routerLink]="['/admin/program']">
+                <i class="ni ni-align-center text-info"> </i> Program
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['/admin/banner']">
+                <i class="ni ni-align-center text-info"> </i> Banner
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['/admin/request-data']">
+                <i class="ni ni-align-center text-info"> </i> Request Data
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['/admin/user-management']">
+                <i class="ni ni-align-center text-info"> </i> User Management
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['/admin/user']">
+                <i class="ni ni-align-center text-info"> </i> User
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['/admin/user-add']">
+                <i class="ni ni-align-center text-info"> </i> Add User
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['/agency/programs']">
+                <i class="ni ni-align-left-2 text-primary"> </i> Program
+              </a>
+            </li>
+            <li class="parent">
+              <a [routerLink]="['/agency/banner']">
+                <i class="ni ni-align-left-2 text-primary"> </i> Update Requests
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['/agency/banner-request']">
+                <i class="ni ni-align-left-2 text-primary"> </i> Create Update
+                Request
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['/agency/report']">
+                <i class="ni ni-align-left-2 text-primary"> </i> Report
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['/agency/request-data']">
+                <i class="ni ni-align-left-2 text-primary"> </i> Request Data
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['/agency/requested-data']">
+                <i class="ni ni-align-left-2 text-primary"> </i> Requested Data
+                List
+              </a>
+            </li>
+            <li>
+              <a [routerLink]="['/agency/search-individual-profile']">
+                <i class="ni ni-align-left-2 text-primary"> </i> Search
+                Individual Profile
+              </a>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>
