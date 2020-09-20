@@ -325,22 +325,58 @@
 
 <!-- <div class="page-header" style="padding-top: 0vh !important"> -->
 <div class="container" style="padding-top: 13vh !important">
-  <div class="row align-items-center text-left">
-    <div class="col-lg-4 col-12">
-      <h1 class="display-3">
-        Akses kepada<span class="text-primary">Maklumat PDPS program </span>
-      </h1>
-      <p class="lead pb-4">
-        Kami berhasrat untuk fokus dalam membina hubungan dengan masyarakat.
-      </p>
+  <div class="row mb-5">
+    <div class="col-lg-5 col-12 mr-auto text-left scollable">
+      <div class="card bg-default shadow border-0">
+        <img
+          class="card-img-top"
+          style="height: 150px"
+          src="assets/img/theme/img-1-1200x1000.jpg"
+        />
+
+        <blockquote class="card-blockquote">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="svg-bg"
+            preserveaspectratio="none"
+            viewbox="0 0 583 95"
+          >
+            <polygon class="fill-default" points="0,52 583,95 0,95"></polygon>
+            <polygon
+              class="fill-default"
+              opacity=".2"
+              points="0,42 583,95 683,0 0,95"
+            ></polygon>
+          </svg>
+          <h4 class="display-4 text-white">News</h4>
+          <p class="lead text-italic text-white">
+            That's my skill. I'm not really specifically talented at anything
+            except for the ability to learn.
+          </p>
+        </blockquote>
+      </div>
     </div>
     <div class="col-lg-7 col-12 pl-0">
-      <img
-        class="ml-lg-8"
-        src="assets/img/brand/banner.jpeg"
-        width="100%"
-        height="300px"
-      />
+      <div class="col-md-12">
+        <carousel>
+          <slide>
+            <img
+              [src]="slider1"
+              alt="first slide"
+              style="display: block; width: 100%; height: 300px"
+              class="d-flex mx-auto"
+            />
+          </slide>
+          <slide>
+            <img
+              [src]="slider2"
+              alt="first slide"
+              style="display: block; width: 100%; height: 300px"
+              class="d-flex mx-auto"
+            />
+          </slide>
+        </carousel>
+      </div>
     </div>
   </div>
 </div>
