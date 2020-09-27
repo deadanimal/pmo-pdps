@@ -7,7 +7,7 @@
             <div class="card-header">
               <div class="row">
                 <div class="col">
-                  <h2 class="title mb-5">Senarai Banner</h2>
+                  <h2 class="title mb-5">Senarai Banner / New Dimohon</h2>
                 </div>
                 <div class="col text-right">
                   <button
@@ -17,6 +17,63 @@
                     Tambah
                   </button>
                 </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table align-items-center table-flush">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>No.</th>
+                      <th>Jenis Program</th>
+                      <th>Nama Program</th>
+                      <th>Penerangan</th>
+                      <th>Tarikh Mohon</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+
+                  <tbody class="list">
+                    <tr>
+                      <td>1.</td>
+                      <td>Banner</td>
+                      <td>Program Bantuan Sara Hidup</td>
+                      <td></td>
+                      <td>16 July 2020</td>
+                      <td>
+                        <span class="badge badge-warning">In Progress</span>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>2.</td>
+                      <td>Berita</td>
+                      <td>Lanjutan Tarikh Akhir BSH</td>
+                      <td>Tarikh akhir dilanjutkan</td>
+                      <td>10 July 2020</td>
+                      <td><span class="badge badge-success">Approved</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <div class="row">
+                <div class="col">
+                  <h2 class="title mb-5">
+                    Senarai Banner / New yang Diluluskan
+                  </h2>
+                </div>
+                <!-- <div class="col text-right">
+                  <button
+                    class="btn btn-sm btn-default"
+                    (click)="openModal(addBannerModal)"
+                  >
+                    Tambah
+                  </button>
+                </div> -->
               </div>
             </div>
             <div class="card-body">
@@ -147,13 +204,13 @@
         Submit
       </button>
       <!-- <button
-          class="btn btn-outline-danger ml-auto"
-          data-dismiss="modal"
-          type="button"
-          (click)="closeModal()"
-        >
-          Tutup
-        </button> -->
+            class="btn btn-outline-danger ml-auto"
+            data-dismiss="modal"
+            type="button"
+            (click)="closeModal()"
+          >
+            Tutup
+          </button> -->
     </div>
   </div>
 </ng-template>

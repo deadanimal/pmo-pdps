@@ -3,11 +3,11 @@ import { BsModalRef, BsModalService } from "ngx-bootstrap";
 import Swal from "sweetalert2";
 
 @Component({
-  selector: "app-banner",
-  templateUrl: "./banner.component.html",
-  styleUrls: ["./banner.component.scss"],
+  selector: "app-program-icu-admin",
+  templateUrl: "./program-icu-admin.component.html",
+  styleUrls: ["./program-icu-admin.component.scss"],
 })
-export class BannerComponent implements OnInit {
+export class ProgramIcuAdminComponent implements OnInit {
   // Modal
   modal: BsModalRef;
   modalConfig = {
@@ -28,7 +28,7 @@ export class BannerComponent implements OnInit {
     // }
     this.modal = this.modalService.show(
       modalRef,
-      Object.assign({}, { class: "gray modal-lg" })
+      Object.assign({}, { class: "gray modal-xl" })
     );
     // this.modal = this.modalService.show(modalRef, this.modalConfig);
   }
@@ -42,15 +42,14 @@ export class BannerComponent implements OnInit {
   }
 
   successAlert(task) {
-    this.modal.hide();
-    Swal.fire({
-      title: "Success",
-      text: task,
-      icon: "success",
-      // showCancelButton: true,
-      confirmButtonText: "Okay",
-      // cancelButtonText: "No, keep it",
-    });
+    // Swal.fire({
+    //   title: "Success",
+    //   text: "Successfully " + task,
+    //   type: "success",
+    //   buttonsStyling: 'confirm',
+    //   confirmButtonClass: "btn btn-success",
+    //   confirmButtonText: "Close",
+    // });
   }
 
   confirm() {

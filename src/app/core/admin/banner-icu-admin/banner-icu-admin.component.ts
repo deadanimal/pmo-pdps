@@ -3,11 +3,11 @@ import { BsModalRef, BsModalService } from "ngx-bootstrap";
 import Swal from "sweetalert2";
 
 @Component({
-  selector: "app-banner",
-  templateUrl: "./banner.component.html",
-  styleUrls: ["./banner.component.scss"],
+  selector: "app-banner-icu-admin",
+  templateUrl: "./banner-icu-admin.component.html",
+  styleUrls: ["./banner-icu-admin.component.scss"],
 })
-export class BannerComponent implements OnInit {
+export class BannerIcuAdminComponent implements OnInit {
   // Modal
   modal: BsModalRef;
   modalConfig = {
