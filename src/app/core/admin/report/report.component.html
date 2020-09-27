@@ -34,7 +34,11 @@
       <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6 col-md-offset-3 mt-1">
-          <button class="btn btn-default" style="width: 100%">
+          <button
+            class="btn btn-default"
+            style="width: 100%"
+            (click)="openModal(laporanPengunjungProgramModal)"
+          >
             Laporan Pengunjung Program Bantuan Di Portal PDPS
           </button>
         </div>
@@ -42,7 +46,11 @@
       <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-6 col-md-offset-3 mt-1">
-          <button class="btn btn-default" style="width: 100%">
+          <button
+            class="btn btn-default"
+            style="width: 100%"
+            (click)="openModal(laporankeseluruhanPengunjungPortalModal)"
+          >
             Laporan Keseluruhan Pengujung Portal PDPS
           </button>
         </div>
@@ -202,6 +210,184 @@
               <td>Lelaki</td>
               <td>Melayu</td>
               <td>Islam</td>
+              <td>{{ progList.kumpsasaran }}</td>
+              <td>{{ progList.kategori }}</td>
+              <td>{{ progList.subkategori }}</td>
+              <td>{{ progList.jenismanfaat }}</td>
+              <td>{{ progList.kekerapan }}</td>
+              <td>{{ progList.jumlahditerima }}</td>
+              <td>{{ progList.jumlahbilanganpenerima }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="text-right pb-3 pl-5">
+      <span class="mr-1">
+        <button
+          class="btn btn-default"
+          (click)="successAlert('Berjaya Jana PDF')"
+        >
+          Jana PDF
+        </button>
+      </span>
+      <span class="mr-1">
+        <button
+          class="btn btn-default"
+          (click)="successAlert('Berjaya Jana Excel')"
+        >
+          Jana Excel
+        </button>
+      </span>
+
+      <!-- <button
+          class="btn btn-outline-danger ml-auto"
+          data-dismiss="modal"
+          type="button"
+          (click)="closeModal()"
+        >
+          Tutup
+        </button> -->
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #laporanPengunjungProgramModal>
+  <div class="row">
+    <div class="col"></div>
+    <div class="col text-center pt-4">
+      <h6><b>Laporan Pengunjung Program Di Portal Bagi Semua Agensi</b></h6>
+    </div>
+    <div class="col text-right">
+      <button
+        aria-label="Close"
+        class="close"
+        data-dismiss="modal"
+        type="button"
+        (click)="closeModal()"
+      >
+        <span
+          aria-hidden="true"
+          class="text-dark my-auto text-xl"
+          style="padding-right: 30px; padding-top: 20px"
+        >
+          ×
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <div class="modal-body">
+    <div class="card-body">
+      <div class="table-responsive" id="htmlData" #htmlData>
+        <table class="table align-items-center table-flush">
+          <thead class="thead-light">
+            <tr>
+              <th>No.</th>
+              <th>Tarikh</th>
+              <th>Masa</th>
+              <th>Username</th>
+              <th>Capaian Yang<br />Dilakukan</th>
+            </tr>
+          </thead>
+          <tbody class="list">
+            <tr>
+              <th>1</th>
+              <td>19/10/2020</td>
+              <td>10.00 am</td>
+              <td>Kamarul</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="text-right pb-3 pl-5">
+      <span class="mr-1">
+        <button
+          class="btn btn-default"
+          (click)="successAlert('Berjaya Jana PDF')"
+        >
+          Jana PDF
+        </button>
+      </span>
+      <span class="mr-1">
+        <button
+          class="btn btn-default"
+          (click)="successAlert('Berjaya Jana Excel')"
+        >
+          Jana Excel
+        </button>
+      </span>
+
+      <!-- <button
+          class="btn btn-outline-danger ml-auto"
+          data-dismiss="modal"
+          type="button"
+          (click)="closeModal()"
+        >
+          Tutup
+        </button> -->
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #laporankeseluruhanPengunjungPortalModal>
+  <div class="row">
+    <div class="col"></div>
+    <div class="col text-center pt-4">
+      <h6><b>Laporan Keseluruhan Pengunjung Portal PDPS</b></h6>
+    </div>
+    <div class="col text-right">
+      <button
+        aria-label="Close"
+        class="close"
+        data-dismiss="modal"
+        type="button"
+        (click)="closeModal()"
+      >
+        <span
+          aria-hidden="true"
+          class="text-dark my-auto text-xl"
+          style="padding-right: 30px; padding-top: 20px"
+        >
+          ×
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <div class="modal-body">
+    <div class="card-body">
+      <div class="table-responsive" id="htmlData" #htmlData>
+        <table class="table align-items-center table-flush">
+          <thead class="thead-light">
+            <tr>
+              <th>No.</th>
+              <th>Nama Program<br />Bantuan Yang<br />Diterima</th>
+              <th>Agensi</th>
+              <th>Teras</th>
+              <th>Kumpulan<br />Sasaran</th>
+              <th>Kategori</th>
+              <th>Sub Kategori</th>
+              <th>Jenis Manfaat<br />Diterima</th>
+              <th>Kekerapan</th>
+              <th>Jumlah Bantuan<br />Yang Diterima</th>
+              <th>Jumlah Bilangan<br />Penerima Semasa</th>
+            </tr>
+          </thead>
+          <tbody class="list">
+            <tr *ngFor="let progList of laporanSenaraiProg">
+              <th>{{ progList.id }}</th>
+              <td>{{ progList.name }}</td>
+              <td>{{ progList.agensi }}</td>
+              <td>{{ progList.teras }}</td>
               <td>{{ progList.kumpsasaran }}</td>
               <td>{{ progList.kategori }}</td>
               <td>{{ progList.subkategori }}</td>
