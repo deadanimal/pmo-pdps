@@ -1,0 +1,112 @@
+<div class="cd-section" id="blogs">
+  <section class="blogs-3">
+    <div class="container">
+      <div class="section">
+        <div class="accordion-1">
+          <div class="accordion" id="accordionExample">
+            <h3 class="title font-weight-bolder">Soalan Lazim</h3>
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button
+                    aria-controls="collapseOne"
+                    class="btn btn-link w-100 text-ssm text-left"
+                    [attr.aria-expanded]="!isCollapsed"
+                    (click)="isCollapsed = !isCollapsed"
+                    id="collapseOne"
+                    type="button"
+                  >
+                    Saluran mana yang harus saya hubungi sekiranya saya
+                    menghadapi masalah umum yang berkaitan dengan perkhidmatan
+                    kerajaan?
+
+                    <i class="ni ni-bold-down float-right pt-1"> </i>
+                  </button>
+                </h5>
+              </div>
+              <div
+                aria-labelledby="headingOne"
+                class="show"
+                data-parent="#accordionExample"
+                [isAnimated]="true"
+                [collapse]="isCollapsed"
+                id="collapseOne"
+              >
+                <div class="card-body opacity-8">
+                  Anda boleh menghubungi di talian 603-8000 8000 .
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button
+                    aria-controls="collapseTwo"
+                    class="btn btn-link w-100 text-ssm text-left collapsed"
+                    [attr.aria-expanded]="!isCollapsed1"
+                    (click)="isCollapsed1 = !isCollapsed1"
+                    id="collapseTwo"
+                    type="button"
+                  >
+                    Apakah faedah pengguna berdaftar?
+                    <i class="ni ni-bold-down float-right pt-1"> </i>
+                  </button>
+                </h5>
+              </div>
+              <div
+                aria-labelledby="headingTwo"
+                data-parent="#accordionExample"
+                [isAnimated]="true"
+                [collapse]="isCollapsed1"
+                id="collapseTwo"
+              >
+                <div class="card-body opacity-8">
+                  Untuk perkhidmatan dalam talian kerajaan, hanya pengguna
+                  berdaftar yang dapat melakukan transaksi yang ditawarkan dalam
+                  Portal MyGovernment. Sementara itu, pengguna yang tidak
+                  berdaftar hanya dapat mengakses maklumat awam dan perkhidmatan
+                  dalam talian yang disediakan seperti "Maklumat Lalu Lintas
+                  Lembah Klang" dan "Cari Institusi Pendidikan di Malaysia".
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                  <button
+                    aria-controls="collapseThree"
+                    class="btn btn-link w-100 text-ssm text-left collapsed"
+                    [attr.aria-expanded]="!isCollapsed2"
+                    (click)="isCollapsed2 = !isCollapsed2"
+                    id="collapseThree"
+                    type="button"
+                  >
+                    Pelayar web mana yang boleh menyokong Portal ini?
+
+                    <i class="ni ni-bold-down float-right pt-1"> </i>
+                  </button>
+                </h5>
+              </div>
+              <div
+                aria-labelledby="headingThree"
+                data-parent="#accordionExample"
+                [isAnimated]="true"
+                [collapse]="isCollapsed2"
+                id="collapseThree"
+              >
+                <div class="card-body opacity-8">
+                  Ini adalah penyemak imbas web berikut yang menyokong
+                  portal:<br />
+                  1. Versi Google Chrome 57.0;<br />
+                  2. Mozilla Firefox Versi 53.0 ke atas.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

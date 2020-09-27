@@ -50,25 +50,28 @@
     </div>
   </div>
 </footer> -->
-<footer class="py-5 bg-secondary" id="footer-main">
+<footer class="py-5 bg-default" id="footer-main">
   <div class="container-fluid">
     <div class="row mb-3 mr-5 ml-5">
-      <div class="col-md-4 text-dark">
+      <div class="col-md-4 text-white">
         <span style="font-size: large; font-weight: bold">Hubungi Kami</span>
         <br /><br />
+        <span>
+          <i class="fas fa-envelope text-white"> </i
+          >&nbsp;&nbsp;webadmin@jpm.gov.my
+        </span>
+        <br />
         <span
-          ><i class="fas fa-envelope text-dark"></i
-          >&nbsp;&nbsp;webadmin@jpm.gov.my</span
-        ><br />
-        <span
-          ><i class="fas fa-phone text-dark"> </i>&nbsp;&nbsp;Tel: 603-8000 8000 </span
-        ><br />
-        <span
-          ><i class="fas fa-phone text-dark"> </i>&nbsp;&nbsp;Faks: 603-8888
-          3904</span
+          ><i class="fas fa-phone text-white"> </i>&nbsp;&nbsp;Tel: 603-8000
+          8000
+        </span>
+        <br />
+        <span>
+          <i class="fas fa-phone text-white"> </i>&nbsp;&nbsp;Faks: 603-8888
+          3904 </span
         ><br />
       </div>
-      <div class="col-md-4 text-dark">
+      <div class="col-md-4 text-white">
         <div class="row">
           <div class="col-md-12">
             <span style="font-size: large; font-weight: bold">Alamat</span>
@@ -107,7 +110,14 @@
         </div>
       </div>
     </div>
-    <hr style="width: 100%" />
+    <hr
+      style="
+        width: 100%;
+        background-color: white;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      "
+    />
     <div
       class="row align-items-center justify-content-xl-between mb--2 mr-5 ml-5"
     >
@@ -125,17 +135,22 @@
         >
           <li class="nav-item" style="cursor: pointer">
             <a
-              class="nav-link text-dark"
-              routerLinkActive="active"
+              class="nav-link text-white"
               style="cursor: pointer"
-              (click)="navigatePage('faq')"
+              (click)="navigatePage('/soalan-lazim')"
             >
               <span class="nav-link-inner--text">Soalan Lazim</span>
             </a>
           </li>
 
           <li class="nav-item" style="cursor: pointer">
-            <a href="#" class="nav-link" target="_blank">Mengenai Kami</a>
+            <a
+              class="nav-link text-white"
+              style="cursor: pointer"
+              (click)="navigatePage('faq')"
+            >
+              <span class="nav-link-inner--text">Mengenai Kami</span>
+            </a>
           </li>
           <!-- <li class="nav-item" style="cursor: pointer;">
             <a

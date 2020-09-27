@@ -89,8 +89,9 @@
   </div>
 
   <div *ngIf="dashProgKanakShow" class="pb-3">
+    <hr style="width: 100%" />
     <div class="row">
-      <div class="col-md-3" (click)="openModal(viewProgramModal, undefined)">
+      <div class="col-md-3" (click)="dashProgKategoridiv('oku')">
         <div class="card card-lift--hover shadow border-0">
           <div class="card-body" style="cursor: pointer">
             <p>OKU</p>
@@ -98,21 +99,21 @@
         </div>
       </div>
 
-      <div class="col-md-3" (click)="openModal(viewProgramModal, undefined)">
+      <div class="col-md-3" (click)="dashProgKategoridiv('kesi')">
         <div class="card card-lift--hover shadow border-0">
           <div class="card-body" style="cursor: pointer">
             <p>Kesihatan</p>
           </div>
         </div>
       </div>
-      <div class="col-md-3" (click)="openModal(viewProgramModal, undefined)">
+      <div class="col-md-3" (click)="dashProgKategoridiv('keba')">
         <div class="card card-lift--hover shadow border-0">
           <div class="card-body" style="cursor: pointer">
             <p>Kebajikan/Sosial</p>
           </div>
         </div>
       </div>
-      <div class="col-md-3" (click)="openModal(viewProgramModal, undefined)">
+      <div class="col-md-3" (click)="dashProgKategoridiv('insu')">
         <div class="card card-lift--hover shadow border-0">
           <div class="card-body" style="cursor: pointer">
             <p>Insurans</p>
@@ -123,8 +124,9 @@
   </div>
 
   <div *ngIf="dashProgRemajaShow" class="pb-3">
+    <hr style="width: 100%" />
     <div class="row">
-      <div class="col-md-3" (click)="openModal(viewProgramModal, undefined)">
+      <div class="col-md-3" (click)="dashProgKategoridiv('insu')">
         <div class="card card-lift--hover shadow border-0">
           <div class="card-body" style="cursor: pointer">
             <p>Insurans</p>
@@ -132,21 +134,21 @@
         </div>
       </div>
 
-      <div class="col-md-3" (click)="openModal(viewProgramModal, undefined)">
+      <div class="col-md-3" (click)="dashProgKategoridiv('oran')">
         <div class="card card-lift--hover shadow border-0">
           <div class="card-body" style="cursor: pointer">
             <p>Orang Asli</p>
           </div>
         </div>
       </div>
-      <div class="col-md-3" (click)="openModal(viewProgramModal, undefined)">
+      <div class="col-md-3" (click)="dashProgKategoridiv('oku')">
         <div class="card card-lift--hover shadow border-0">
           <div class="card-body" style="cursor: pointer">
             <p>OKU</p>
           </div>
         </div>
       </div>
-      <div class="col-md-3" (click)="openModal(viewProgramModal, undefined)">
+      <div class="col-md-3" (click)="dashProgKategoridiv('peru')">
         <div class="card card-lift--hover shadow border-0">
           <div class="card-body" style="cursor: pointer">
             <p>Perumahan/Institusi</p>
@@ -155,7 +157,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-3" (click)="openModal(viewProgramModal, undefined)">
+      <div class="col-md-3" (click)="dashProgKategoridiv('perk')">
         <div class="card card-lift--hover shadow border-0">
           <div class="card-body" style="cursor: pointer">
             <p>Pekerjaan</p>
@@ -163,14 +165,14 @@
         </div>
       </div>
 
-      <div class="col-md-3" (click)="openModal(viewProgramModal, undefined)">
+      <div class="col-md-3" (click)="dashProgKategoridiv('kesi')">
         <div class="card card-lift--hover shadow border-0">
           <div class="card-body" style="cursor: pointer">
             <p>Kesihatan</p>
           </div>
         </div>
       </div>
-      <!-- <div class="col-md-3" (click)="openModal(viewProgramModal, undefined)">
+      <!-- <div class="col-md-3" (click)="dashProgKategoridiv(viewProgramModal)">
           <div class="card card-lift--hover shadow border-0">
             <div class="card-body" style="cursor: pointer">
               <p>Kebajikan/Sosial</p>
@@ -181,15 +183,16 @@
   </div>
 
   <div *ngIf="dashProgWargaShow" class="pb-3">
+    <hr style="width: 100%" />
     <div class="row">
-      <div class="col-md-3" (click)="openModal(viewProgramModal, undefined)">
+      <div class="col-md-3" (click)="dashProgKategoridiv('oran')">
         <div class="card card-lift--hover shadow border-0">
           <div class="card-body" style="cursor: pointer">
             <p>Orang Asli</p>
           </div>
         </div>
       </div>
-      <div class="col-md-3" (click)="openModal(viewProgramModal, undefined)">
+      <div class="col-md-3" (click)="dashProgKategoridiv('oku')">
         <div class="card card-lift--hover shadow border-0">
           <div class="card-body" style="cursor: pointer">
             <p>OKU</p>
@@ -197,14 +200,14 @@
         </div>
       </div>
 
-      <div class="col-md-3" (click)="openModal(viewProgramModal, undefined)">
+      <div class="col-md-3" (click)="dashProgKategoridiv('kesi')">
         <div class="card card-lift--hover shadow border-0">
           <div class="card-body" style="cursor: pointer">
             <p>Kesihatan</p>
           </div>
         </div>
       </div>
-      <div class="col-md-3" (click)="openModal(viewProgramModal, undefined)">
+      <div class="col-md-3" (click)="dashProgKategoridiv('insu')">
         <div class="card card-lift--hover shadow border-0">
           <div class="card-body" style="cursor: pointer">
             <p>Insurans</p>
@@ -213,7 +216,76 @@
       </div>
     </div>
   </div>
+
+  <div *ngIf="dashProgKategoriOkuShow" class="pb-3">
+    <hr style="width: 100%" />
+    <div class="row">
+      <div class="col-md-3" (click)="openModal(viewProgramModal)">
+        <div class="card card-lift--hover shadow border-0">
+          <div class="card-body" style="cursor: pointer">
+            <p>Bantuan Sara Hidup (BSH)</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" (click)="openModal(viewProgramModal)">
+        <div class="card card-lift--hover shadow border-0">
+          <div class="card-body" style="cursor: pointer">
+            <p>Skim mySalam</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3" (click)="openModal(viewProgramModal)">
+        <div class="card card-lift--hover shadow border-0">
+          <div class="card-body" style="cursor: pointer">
+            <p>Program Rebet Electrik RM40</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="dashProgKategoriKesShow" class="pb-3">
+    <hr style="width: 100%" />
+    <div class="row">
+      <div class="col-md-3" (click)="openModal(viewProgramModal)">
+        <div class="card card-lift--hover shadow border-0">
+          <div class="card-body" style="cursor: pointer">
+            <p>Bantuan Sara Hidup (BSH)</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" (click)="openModal(viewProgramModal)">
+        <div class="card card-lift--hover shadow border-0">
+          <div class="card-body" style="cursor: pointer">
+            <p>Skim mySalam</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="dashProgKategoriElseShow" class="pb-3">
+    <hr style="width: 100%" />
+    <div class="row">
+      <div class="col-md-3" (click)="openModal(viewProgramModal)">
+        <div class="card card-lift--hover shadow border-0">
+          <div class="card-body" style="cursor: pointer">
+            <p>Bantuan Sara Hidup (BSH)</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" (click)="openModal(viewProgramModal)">
+        <div class="card card-lift--hover shadow border-0">
+          <div class="card-body" style="cursor: pointer">
+            <p>Bantuan Awal Persekolahan</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
+<!-- (click)="openModal(viewProgramModal)" -->
 <!-- </div> -->
 
 <ng-template #viewProgramModal>

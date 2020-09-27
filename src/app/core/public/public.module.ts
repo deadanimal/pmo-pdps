@@ -12,10 +12,16 @@ import { PaginationModule } from 'ngx-bootstrap/pagination';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { RouterModule } from '@angular/router';
 import { PublicRoutes } from './public.routing';
+import { SoalanLazimComponent } from './soalan-lazim/soalan-lazim.component';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    SoalanLazimComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     CommonModule,

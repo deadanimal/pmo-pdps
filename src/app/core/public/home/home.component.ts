@@ -26,6 +26,9 @@ export class HomeComponent implements OnInit {
   dashProgKanakShow: boolean = false;
   dashProgRemajaShow: boolean = false;
   dashProgWargaShow: boolean = false;
+  dashProgKategoriOkuShow: boolean = false;
+  dashProgKategoriKesShow: boolean = false;
+  dashProgKategoriElseShow: boolean = false;
 
   constructor(
     private modalService: BsModalService,
@@ -71,14 +74,39 @@ export class HomeComponent implements OnInit {
       this.dashProgKanakShow = true;
       this.dashProgWargaShow = false;
       this.dashProgRemajaShow = false;
+      this.dashProgKategoriOkuShow = false;
+      this.dashProgKategoriKesShow = false;
+      this.dashProgKategoriElseShow = false;
     } else if (para == "r") {
       this.dashProgRemajaShow = true;
       this.dashProgKanakShow = false;
       this.dashProgWargaShow = false;
+      this.dashProgKategoriOkuShow = false;
+      this.dashProgKategoriKesShow = false;
+      this.dashProgKategoriElseShow = false;
     } else if (para == "w") {
       this.dashProgWargaShow = true;
       this.dashProgRemajaShow = false;
       this.dashProgKanakShow = false;
+      this.dashProgKategoriOkuShow = false;
+      this.dashProgKategoriKesShow = false;
+      this.dashProgKategoriElseShow = false;
+    }
+  }
+
+  dashProgKategoridiv(value) {
+    if (value == "oku") {
+      this.dashProgKategoriOkuShow = true;
+      this.dashProgKategoriKesShow = false;
+      this.dashProgKategoriElseShow = false;
+    } else if (value == "kesi") {
+      this.dashProgKategoriKesShow = true;
+      this.dashProgKategoriOkuShow = false;
+      this.dashProgKategoriElseShow = false;
+    } else {
+      this.dashProgKategoriElseShow = true;
+      this.dashProgKategoriOkuShow = false;
+      this.dashProgKategoriKesShow = false;
     }
   }
 

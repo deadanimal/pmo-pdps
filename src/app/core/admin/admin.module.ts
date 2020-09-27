@@ -20,7 +20,7 @@ import { ProgramComponent } from "./program/program.component";
 import { UserComponent } from "./user/user.component";
 import { UserAddComponent } from "./user-add/user-add.component";
 import { ProgramIcuAdminComponent } from "./program-icu-admin/program-icu-admin.component";
-import { BannerIcuAdminComponent } from './banner-icu-admin/banner-icu-admin.component';
+import { BannerIcuAdminComponent } from "./banner-icu-admin/banner-icu-admin.component";
 
 @NgModule({
   declarations: [

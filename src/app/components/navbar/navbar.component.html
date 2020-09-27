@@ -1,11 +1,50 @@
 <nav
-  class="navbar navbar-main navbar-expand-lg navbar-dark headroom bg-default"
+  class="navbar navbar-main navbar-expand-lg navbar-dark headroom"
+  style="background-color: #172b4d"
   id="navbar-main"
 >
   <div class="container-fluid">
-    <a class="navbar-brand mr-lg-5" [routerLink]="['/home']">
-      <img src="assets/img/logo/jata_negara.png" id="brand-logo" />
-    </a>
+    <span>
+      <a class="navbar-brand mr-lg-5" [routerLink]="['/home']">
+        <img src="assets/img/logo/jata_negara.png" id="brand-logo" />
+      </a>
+      <span>
+        <a
+          class="navbar-brand mt--1"
+          style="cursor: pointer"
+          (click)="getColorCOde('1ebebb')"
+        >
+          <img
+            src="assets/img/icons/color1.png"
+            style="width: 30px; height: 30px; border: 2px solid #fff"
+          />
+        </a>
+        <a
+          class="navbar-brand mt--1"
+          style="cursor: pointer"
+          (click)="getColorCOde('982d58')"
+        >
+          <img
+            src="assets/img/icons/color2.png"
+            style="width: 30px; height: 30px; border: 2px solid #fff"
+          />
+        </a>
+        <a
+          class="navbar-brand mt--1"
+          style="cursor: pointer"
+          (click)="getColorCOde('e06100')"
+        >
+          <img
+            src="assets/img/icons/color3.png"
+            style="width: 30px; height: 30px; border: 2px solid #fff"
+          />
+        </a>
+      </span>
+      <span>
+        <button class="btn btn-sm btn-white flat-butt text-black">A+</button>
+        <button class="btn btn-sm btn-white flat-butt text-black">A-</button>
+      </span>
+    </span>
     <button
       aria-controls="navbar_global"
       aria-label="Toggle navigation"
@@ -135,7 +174,7 @@
         class="navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto"
       >
         <li class="parent">
-          <a href="#"> Perlindungan Sosial </a>
+          <a> Perlindungan Sosial </a>
 
           <!-- <a href="#">Fun Puzzle<span class="expand">»</span></a> -->
           <ul class="child">
@@ -181,6 +220,9 @@
         <li class="parent">
           <a href="#">Pages</a>
           <ul class="child">
+            <li style="cursor: pointer">
+              <a (click)="openModalsm(login)"> Log Masuk</a>
+            </li>
             <li>
               <a [routerLink]="['/admin/program']"> Program </a>
             </li>
@@ -191,13 +233,15 @@
               <a [routerLink]="['/admin/request-data']"> Request Data </a>
             </li>
             <li>
-              <a [routerLink]="['/admin/user-management']"> User Management </a>
+              <a [routerLink]="['/admin/user-management']">
+                Pengurusan pengguna
+              </a>
             </li>
             <li>
-              <a [routerLink]="['/admin/user']"> User </a>
+              <a [routerLink]="['/admin/user']"> Penguna </a>
             </li>
             <li>
-              <a [routerLink]="['/admin/user-add']"> Add User </a>
+              <a [routerLink]="['/admin/user-add']"> Tambah Penguna </a>
             </li>
             <li>
               <a [routerLink]="['/admin/program-icu-admin']">
@@ -210,16 +254,19 @@
               </a>
             </li>
             <li class="parent">
-              <a [routerLink]="['/agency/banner']"> Update Requests </a>
+              <a [routerLink]="['/agency/banner']"> Agensi Senarai Banner</a>
             </li>
             <li>
               <a [routerLink]="['/agency/banner-request']">
-                Create Update Request
+                Agensi Permintaan Banner
               </a>
             </li>
             <li>
-              <a [routerLink]="['/agency/report']"> Report </a>
+              <a [routerLink]="['/admin/report']"> Report </a>
             </li>
+            <!-- <li>
+              <a [routerLink]="['/agency/report']"> Report </a>
+            </li> -->
             <li>
               <a [routerLink]="['/agency/request-data']"> Request Data </a>
             </li>
@@ -377,8 +424,8 @@
   <div class="page-header header-filter">
     <div class="content-center">
       <div class="row">
-        <div class="col-lg-5 col-md-8 col-12 mx-auto positioned">
-          <h4 class="title text-white text-uppercase ml-0">News</h4>
+        <div class="col-lg-5 col-md-8 col-12 mx-auto positioned scollable">
+          <h4 class="title text-white text-uppercase ml-0">Berita</h4>
           <div class="info info-horizontal ml-0">
             <div
               class="icon icon-shape bg-white shadow rounded-circle text-default"
@@ -387,11 +434,13 @@
             </div>
             <div class="description">
               <h6 class="info-title text-uppercase text-white pl-0">
-                Connect with founders
+                Tajuk: Pakej Rangsangan Ekonomi
               </h6>
               <p class="text-white opacity-8">
-                As we live, our hearts turn colder. Cause pain is what we go
-                through as we become older and we get insulted
+                Pakej Rangsangan Ekonomi (PRE) PRIHATIN telah diumumkan oleh YAB
+                Perdana Menteri pada 27 Mac 2020. Pakej PRIHATIN ini akan
+                menyediakan bantuan segera untuk meringankan beban semua,
+                terutamanya mereka yang terkesan dengan pandemik COVID-19.
               </p>
             </div>
           </div>
@@ -403,15 +452,19 @@
             </div>
             <div class="description">
               <h6 class="info-title text-uppercase text-white pl-0">
-                Learn from experts
+                Tajuk: Pelajar B40 menerima dermasiswa MYBRighter Future YTN
+                2020
               </h6>
               <p class="text-white opacity-8">
-                We get back stabbed by friends. It becomes harder for us to give
-                others a hand. We get our heart broken by people we love.
+                Seramai 2,500 pelajar baharu daripada keluarga golongan B40 di
+                seluruh negara, terpilih menerima tawaran program Dermasiswa
+                ‘MyBrighter Future’ Yayasan Tenaga Nasional (YTN) 2020 bagi
+                melanjutkan pelajaran dalam pelbagai bidang, di Institusi
+                Pengajian Tinggi (IPT).
               </p>
             </div>
           </div>
-          <!-- <div class="info info-horizontal ml-0">
+          <div class="info info-horizontal ml-0">
             <div
               class="icon icon-shape bg-white shadow rounded-circle text-default"
             >
@@ -419,32 +472,33 @@
             </div>
             <div class="description">
               <h6 class="info-title text-uppercase text-white pl-0">
-                Get practical advice
+                Tajuk: Elaun Sara Hidup Nelayan Dinaikkan
               </h6>
               <p class="text-white opacity-8">
-                When we lose family over time. What else could rust the heart
-                more over time? Blackgold. It becomes harder...
+                Kerajaan bersetuju menaikkan Elaun Sara Hidup Nelayan dari RM250
+                kepada RM300 sebulan, kata Perdana Menteri Tan Sri Muhyiddin
+                Yassin.
               </p>
             </div>
-          </div> -->
+          </div>
         </div>
         <div class="col-md-12 col-md-6">
           <div class="glide">
             <div class="glide__track" data-glide-el="track">
-              <ul class="glide__slides" style="width: 100% !important">
+              <ul class="glide__slides" style="width: 600px !important">
                 <li class="glide__slide">
                   <img
                     height="400"
+                    style="width: 600px !important"
                     [src]="slider1"
                     (click)="navigatePage('agency/programs')"
-                    width="600"
                   />
                 </li>
                 <li class="glide__slide">
                   <img
                     height="400"
                     [src]="slider2"
-                    width="600"
+                    style="width: 600px !important"
                     (click)="navigatePage('agency/programs')"
                   />
                 </li>
@@ -453,41 +507,20 @@
                     height="400"
                     [src]="slider3"
                     (click)="navigatePage('agency/programs')"
-                    width="600"
+                    style="width: 600px !important"
                   />
                 </li>
                 <li class="glide__slide">
                   <img
                     height="400"
                     [src]="slider4"
-                    width="600"
+                    style="width: 600px !important"
                     (click)="navigatePage('agency/programs')"
                   />
                 </li>
-                <li class="glide__slide">
-                  <img
-                    height="400"
-                    src="assets/img/theme/doyoun-seo.jpg"
-                    width="600"
-                  />
-                </li>
-                <li class="glide__slide">
-                  <img
-                    height="400"
-                    src="assets/img/theme/sofia-kuniakina.jpg"
-                    width="600"
-                  />
-                </li>
-                <!-- <li class="glide__slide">
-                  <img
-                    height="400"
-                    src="assets/img/theme/ayo-ogunseinde.jpg"
-                    width="600"
-                  />
-                </li> -->
               </ul>
             </div>
-            <div class="glide__arrows" data-glide-el="controls">
+            <div class="glide__arrows mt-3" data-glide-el="controls">
               <button
                 class="glide__arrow glide__arrow--left"
                 data-glide-dir="<"
@@ -510,36 +543,63 @@
   </div>
 </header>
 
-<!-- <div
-class="col-lg-4 col-4 mr-auto text-left scollable"
-style="height: 400px; padding-right: 0 !important"
->
-<div class="card bg-default shadow border-0">
-  <img
-    class="card-img-top"
-    style="height: 200px"
-    src="assets/img/theme/img-1-1200x1000.jpg"
-  />
+<ng-template #login>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col text-right">
+        <span
+          data-dismiss="modal"
+          (click)="closeModal()"
+          style="padding-right: 30px"
+        >
+          ×
+        </span>
+      </div>
+    </div>
+    <span class="text-center">
+      <h5>Log Masuk</h5>
+    </span>
 
-  <blockquote class="card-blockquote">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="svg-bg"
-      preserveaspectratio="none"
-      viewbox="0 0 583 95"
-    >
-      <polygon class="fill-default" points="0,52 583,95 0,95"></polygon>
-      <polygon
-        class="fill-default"
-        opacity=".2"
-        points="0,42 583,95 683,0 0,95"
-      ></polygon>
-    </svg>
-    <h4 class="display-4 text-white">News</h4>
-    <p class="lead text-italic text-white">
-      That's my skill. I'm not really specifically talented at anything
-      except for the ability to learn.
-    </p>
-  </blockquote>
-</div>
-</div> -->
+    <div class="form-group">
+      <label class="form-control-label">Username</label>
+      <input class="form-control" />
+    </div>
+    <div class="form-group">
+      <label class="form-control-label">Password</label>
+      <input class="form-control" type="password" />
+    </div>
+    <div class="text-center">
+      <button class="btn btn-default">Log Masuk</button>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #daftar>
+  <div class="modal-body">
+    <div class="row mb-3">
+      <div class="col text-right">
+        <span
+          data-dismiss="modal"
+          (click)="closeModal()"
+          style="padding-right: 30px"
+        >
+          ×
+        </span>
+      </div>
+    </div>
+    <label><h5>Sila P</h5></label>
+    <div class="row">
+      <div
+        class="col-md-4 text-center"
+        style="padding-top: 25px"
+        (click)="agediv()"
+      >
+        <div class="card card-lift--hover shadow border-0 info info-hover-info">
+          <div class="card-body" style="cursor: pointer">
+            <h4><b>0 - 18</b></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
