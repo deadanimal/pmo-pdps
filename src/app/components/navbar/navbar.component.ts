@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { Router, NavigationEnd } from "@angular/router";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-navbar",
@@ -25,4 +25,11 @@ export class NavbarComponent implements OnInit {
     return false;
   }
   ngOnInit() {}
+
+  navigatePage(path: String) {
+    // let qq = "db17a36a-1da6-4919-9746-dfed8802ec9d";
+    if (path == "agency/programs") {
+      return this.router.navigate([path]);
+    }
+  }
 }

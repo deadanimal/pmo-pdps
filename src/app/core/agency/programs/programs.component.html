@@ -2,56 +2,101 @@
   <section class="blogs-3">
     <div class="container py-7">
       <div class="row mb-9">
-        <div class="col-lg-10 col-md-8 mx-auto">
-          <h2 class="title mb-5">Senarai Program</h2>
+        <div class="col-lg-12 col-md-12">
           <div class="card">
-            <div class="table-responsive">
-              <table class="table align-items-center table-flush">
-                <thead class="thead-light">
-                  <tr>
-                    <th>No.</th>
-                    <th>Nama Program</th>
-                    <th>Kumpulan</th>
-                    <th>Kos (RM)</th>
-                    <th>Kekerapan</th>
-                    <th>Tarikh Kemaskini</th>
-                    <th>Status</th>
-                    <th></th>
-                  </tr>
-                </thead>
+            <div class="card-header">
+              <div class="row">
+                <div class="col">
+                  <h2 class="title mb-5">Senarai Program</h2>
+                </div>
+                <div class="col text-right">
+                  <button
+                    class="btn btn-default"
+                    style="cursor: pointer"
+                    (click)="openModal(addProgramModal)"
+                  >
+                    Tambah Program
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table align-items-center table-flush">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>No.</th>
+                      <th>Nama Program</th>
+                      <th>Kumpulan</th>
+                      <th>Kos (RM)</th>
+                      <th>Kekerapan</th>
+                      <th>Tarikh Kemaskini</th>
+                      <th>Status</th>
+                      <th></th>
+                    </tr>
+                  </thead>
 
-                <tbody class="list">
-                  <tr>
-                    <td>1.</td>
-                    <td>Bantuan Sara Hidup (BSH)</td>
-                    <td>Warga Emas</td>
-                    <td>600.00</td>
-                    <td>One-off</td>
-                    <td>16 June 2020</td>
-                    <td><span class="badge badge-success">Active</span></td>
-                    <td>
-                      <button class="btn btn-sm btn-default">
-                        Pautan Ke Agensi
-                      </button>
-                    </td>
-                  </tr>
+                  <tbody class="list">
+                    <tr>
+                      <td>1.</td>
+                      <td
+                        style="cursor: pointer"
+                        (click)="openModal(viewProgramModal)"
+                      >
+                        Bantuan Sara Hidup (BSH)
+                      </td>
+                      <td>Warga Emas</td>
+                      <td>600.00</td>
+                      <td>One-off</td>
+                      <td>16 June 2020</td>
+                      <td><span class="badge badge-success">Active</span></td>
+                      <td>
+                        <button
+                          class="btn btn-sm btn-warning"
+                          (click)="openModal(editProgramModal)"
+                        >
+                          Ubah
+                        </button>
+                        <button
+                          class="btn btn-sm btn-danger"
+                          (click)="confirm()"
+                        >
+                          Padam
+                        </button>
+                      </td>
+                    </tr>
 
-                  <tr>
-                    <td>2.</td>
-                    <td>Bantuan Am Negeri</td>
-                    <td>Dewasa</td>
-                    <td>1500.00</td>
-                    <td>One-off</td>
-                    <td>4 June 2020</td>
-                    <td><span class="badge badge-warning">Inactive</span></td>
-                    <td>
-                      <button class="btn btn-sm btn-default">
-                        Pautan Ke Agensi
-                      </button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                    <tr>
+                      <td>2.</td>
+                      <td
+                        style="cursor: pointer"
+                        (click)="openModal(viewProgramModal)"
+                      >
+                        Bantuan Am Negeri
+                      </td>
+                      <td>Dewasa</td>
+                      <td>1500.00</td>
+                      <td>One-off</td>
+                      <td>4 June 2020</td>
+                      <td><span class="badge badge-warning">Inactive</span></td>
+                      <td>
+                        <button
+                          class="btn btn-sm btn-warning"
+                          (click)="openModal(editProgramModal)"
+                        >
+                          Ubah
+                        </button>
+                        <button
+                          class="btn btn-sm btn-danger"
+                          (click)="confirm()"
+                        >
+                          Padam
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
@@ -59,3 +104,460 @@
     </div>
   </section>
 </div>
+
+<ng-template #viewProgramModal class="bg-secondary">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col text-center pt-4">
+      <h6><b>Maklumat Program</b></h6>
+    </div>
+    <div class="col text-right">
+      <button
+        aria-label="Close"
+        class="close"
+        data-dismiss="modal"
+        type="button"
+        (click)="closeModal()"
+      >
+        <span
+          aria-hidden="true"
+          class="text-dark my-auto text-xl"
+          style="padding-right: 30px; padding-top: 20px"
+        >
+          ×
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <div class="modal-body">
+    <div class="table-responsive">
+      <table class="table align-items-center table-flush table-hover">
+        <tbody class="list">
+          <tr>
+            <td>Agensi</td>
+            <td>: Kementerian Kewangan</td>
+          </tr>
+          <tr>
+            <td>Nama Program</td>
+            <td>: Bantuan Sara Hidup (BSH)</td>
+          </tr>
+          <tr>
+            <td>Kumpulan Sasaran</td>
+            <td>: Warga Emas</td>
+          </tr>
+          <tr>
+            <td>Kategori</td>
+            <td>: Kebajikan Masyarakat</td>
+          </tr>
+          <tr>
+            <td>Objektif Program</td>
+            <td>: Bantuan isi rumah untuk rakyat Malaysia</td>
+          </tr>
+          <tr>
+            <td>Kriteria/Syarat</td>
+            <td>: Isi rumah pendapatan bulanan RM2000.00dan kebawah</td>
+          </tr>
+          <tr>
+            <td>Manfaat</td>
+            <td>: Wang Tunai</td>
+          </tr>
+          <tr>
+            <td>Kos (RM)</td>
+            <td>: 600.00</td>
+          </tr>
+          <tr>
+            <td>Kekerapan</td>
+            <td>: Sekali</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="text-left pb-3 pl-5">
+      <button class="btn btn-default" (click)="navigatePage('agency/programs')">
+        Pautan Ke Agensi
+      </button>
+      <!-- <button
+        class="btn btn-outline-danger ml-auto"
+        data-dismiss="modal"
+        type="button"
+        (click)="closeModal()"
+      >
+        Tutup
+      </button> -->
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #addProgramModal>
+  <div class="row">
+    <div class="col"></div>
+    <div class="col text-center pt-4">
+      <h6><b>Tambah Program</b></h6>
+    </div>
+    <div class="col text-right">
+      <button
+        aria-label="Close"
+        class="close"
+        data-dismiss="modal"
+        type="button"
+        (click)="closeModal()"
+      >
+        <span
+          aria-hidden="true"
+          class="text-dark my-auto text-xl"
+          style="padding-right: 30px; padding-top: 20px"
+        >
+          ×
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <div class="modal-body">
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Agensi</label>
+          <input class="form-control" />
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Teras </label>
+          <input class="form-control" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Nama / Jenis Program</label>
+          <input class="form-control" />
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Kumpulan Sasaran </label>
+          <input class="form-control" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label class="form-control-label">Sub Kategori</label>
+        <div class="form-group">
+          <label class="form-control-label">Jantina</label>
+          <input class="form-control" />
+        </div>
+      </div>
+      <div class="col"></div>
+    </div>
+    <div class="row" *ngIf="showSubKategori">
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Sub Kategori 1</label>
+          <input class="form-control" />
+        </div>
+      </div>
+      <div class="col"></div>
+    </div>
+    <div class="row mb-2">
+      <div class="col">
+        <button class="btn btn-default btn-sm" (click)="tambahSubKategori()">
+          Tambah Sub Kategori<i class="fa fa-plus"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Tarikh Mula</label>
+          <input class="form-control" type="date" />
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Tarikh Tamat </label>
+          <input class="form-control" type="date" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Objektif Program</label>
+          <textarea class="form-control" type="text" rows="5"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Manfaat</label>
+          <input class="form-control" type="Text" />
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Kekerapan </label>
+          <input class="form-control" type="text" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Kos (RM)</label>
+          <input class="form-control" type="Text" />
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Status Perlaksanaan </label>
+          <input class="form-control" type="text" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Syarat Program</label>
+          <input class="form-control" type="Text" />
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Agensi URL </label>
+          <input class="form-control" type="text" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Upload Icon</label>
+          <input class="form-control" type="file" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="text-right pb-3 pl-5">
+      <button class="btn btn-default" (click)="navigatePage('agency/programs')">
+        Submit
+      </button>
+      <!-- <button
+        class="btn btn-outline-danger ml-auto"
+        data-dismiss="modal"
+        type="button"
+        (click)="closeModal()"
+      >
+        Tutup
+      </button> -->
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #editProgramModal>
+  <div class="row">
+    <div class="col"></div>
+    <div class="col text-center pt-4">
+      <h6><b>Ubah Program</b></h6>
+    </div>
+    <div class="col text-right">
+      <button
+        aria-label="Close"
+        class="close"
+        data-dismiss="modal"
+        type="button"
+        (click)="closeModal()"
+      >
+        <span
+          aria-hidden="true"
+          class="text-dark my-auto text-xl"
+          style="padding-right: 30px; padding-top: 20px"
+        >
+          ×
+        </span>
+      </button>
+    </div>
+  </div>
+
+  <div class="modal-body">
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Agensi</label>
+          <input class="form-control" />
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Teras </label>
+          <input class="form-control" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Nama / Jenis Program</label>
+          <input class="form-control" />
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Kumpulan Sasaran </label>
+          <input class="form-control" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label class="form-control-label">Sub Kategori</label>
+        <div class="form-group">
+          <label class="form-control-label">Jantina</label>
+          <input class="form-control" />
+        </div>
+      </div>
+      <div class="col"></div>
+    </div>
+    <div class="row" *ngIf="showSubKategori">
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Sub Kategori 1</label>
+          <input class="form-control" />
+        </div>
+      </div>
+      <div class="col"></div>
+    </div>
+    <div class="row mb-2">
+      <div class="col">
+        <button class="btn btn-default btn-sm" (click)="tambahSubKategori()">
+          Tambah Sub Kategori<i class="fa fa-plus"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Tarikh Mula</label>
+          <input class="form-control" type="date" />
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Tarikh Tamat </label>
+          <input class="form-control" type="date" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Objektif Program</label>
+          <textarea class="form-control" type="text" rows="5"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Manfaat</label>
+          <input class="form-control" type="Text" />
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Kekerapan </label>
+          <input class="form-control" type="text" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Kos (RM)</label>
+          <input class="form-control" type="Text" />
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Status Perlaksanaan </label>
+          <input class="form-control" type="text" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Syarat Program</label>
+          <input class="form-control" type="Text" />
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Agensi URL </label>
+          <input class="form-control" type="text" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label class="form-control-label">Upload Icon</label>
+          <input class="form-control" type="file" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="text-right pb-3 pl-5">
+      <button class="btn btn-default" (click)="navigatePage('agency/programs')">
+        Submit
+      </button>
+      <!-- <button
+        class="btn btn-outline-danger ml-auto"
+        data-dismiss="modal"
+        type="button"
+        (click)="closeModal()"
+      >
+        Tutup
+      </button> -->
+    </div>
+  </div>
+</ng-template>

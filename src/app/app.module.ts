@@ -24,14 +24,14 @@ import { PresentationModule } from "./presentation/presentation.module";
 
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { FooterComponent } from "./components/footer/footer.component";
-import { SystemLayoutComponent } from './layouts/system-layout/system-layout.component';
+import { SystemLayoutComponent } from "./layouts/system-layout/system-layout.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
-    SystemLayoutComponent
+    SystemLayoutComponent,
   ],
   imports: [
     CommonModule,
@@ -52,9 +52,9 @@ import { SystemLayoutComponent } from './layouts/system-layout/system-layout.com
     AlertModule.forRoot(),
     BsDatepickerModule.forRoot(),
     CarouselModule.forRoot(),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

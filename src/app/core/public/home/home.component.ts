@@ -16,6 +16,10 @@ export class HomeComponent implements OnInit {
   };
   @ViewChild("addModal", { static: true }) modalTemplate: TemplateRef<any>;
 
+  // slider
+  slider1 = "assets/img/brand/banner.jpeg";
+  slider2 = "assets/img/brand/banner2.png";
+
   genderShow: boolean = false;
   buttonShow: boolean = false;
   programShow: boolean = false;
