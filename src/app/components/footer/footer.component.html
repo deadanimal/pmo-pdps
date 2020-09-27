@@ -50,55 +50,108 @@
     </div>
   </div>
 </footer> -->
-<footer class="footer">
-  <div class="container">
-    <div class="row row-grid align-items-center mb-5">
-      <div class="col-lg-6">
-        <h3 class="text-primary font-weight-light mb-2"></h3>
-        <h4 class="mb-0 font-weight-light">
-          Mari berhubung dengan mana-mana platform ini.
-        </h4>
+<footer class="py-5 bg-secondary" id="footer-main">
+  <div class="container-fluid">
+    <div class="row mb-3 mr-5 ml-5">
+      <div class="col-md-4 text-dark">
+        <span style="font-size: large; font-weight: bold">Hubungi Kami</span>
+        <br /><br />
+        <span
+          ><i class="fas fa-envelope text-dark"></i
+          >&nbsp;&nbsp;webadmin@jpm.gov.my</span
+        ><br />
+        <span
+          ><i class="fas fa-phone text-dark"> </i>&nbsp;&nbsp;Tel: 603-8000 8000 </span
+        ><br />
+        <span
+          ><i class="fas fa-phone text-dark"> </i>&nbsp;&nbsp;Faks: 603-8888
+          3904</span
+        ><br />
       </div>
-      <div class="col-lg-6 text-lg-center btn-wrapper">
-        <button
-          class="btn btn-icon-only btn-twitter rounded-circle mr-3"
-          href="https://twitter.com/"
-          target="_blank"
-        >
-          <span class="btn-inner--icon">
-            <i class="fa fa-twitter"> </i>
-          </span>
-        </button>
-        <button
-          class="btn-icon-only rounded-circle btn btn-facebook mr-3"
-          href="https://www.facebook.com/"
-          target="_blank"
-        >
-          <span class="btn-inner--icon">
-            <i class="fab fa-facebook"> </i>
-          </span>
-        </button>
-      </div>
-    </div>
-    <hr />
-
-    <div class="row align-items-center justify-content-md-between">
-      <div class="col-md-6">
-        <div class="copyright">
-          © {{ date | date: "yyyy" }}
-          <a href="" target="_blank"> PDPS Portal </a> .
+      <div class="col-md-4 text-dark">
+        <div class="row">
+          <div class="col-md-12">
+            <span style="font-size: large; font-weight: bold">Alamat</span>
+            <br /><br />
+            <span>
+              <i class="fas fa-map-marker-alt text-danger"></i
+              >&nbsp;&nbsp;Jabatan Perdana Menteri<br />
+              Setia Perdana 8, Kompleks Setia Perdana,<br />
+              Pusat Pentadbiran Kerajaan Persekutuan,<br />
+              62502 Putrajaya,<br />
+              Malaysia.
+            </span>
+          </div>
         </div>
       </div>
-      <div class="col-md-6">
-        <ul class="nav nav-footer justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link" href="" target="_blank"> JPM </a>
+      <div class="col-md-4">
+        <div class="col-lg-6 text-lg-center btn-wrapper">
+          <button
+            class="btn btn-icon-only btn-twitter rounded-circle mr-3"
+            href="https://twitter.com/"
+            target="_blank"
+          >
+            <span class="btn-inner--icon">
+              <i class="fa fa-twitter"> </i>
+            </span>
+          </button>
+          <button
+            class="btn-icon-only rounded-circle btn btn-facebook mr-3"
+            href="https://www.facebook.com/"
+            target="_blank"
+          >
+            <span class="btn-inner--icon">
+              <i class="fab fa-facebook"> </i>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <hr style="width: 100%" />
+    <div
+      class="row align-items-center justify-content-xl-between mb--2 mr-5 ml-5"
+    >
+      <div class="col-xl-6">
+        <div class="copyright text-center text-xl-left text-muted">
+          &copy; 2020
+          <a href="#" class="font-weight-bold ml-1" target="_blank"
+            >PMO - PDPS</a
+          >
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <ul
+          class="nav nav-footer justify-content-center justify-content-xl-end"
+        >
+          <li class="nav-item" style="cursor: pointer">
+            <a
+              class="nav-link text-dark"
+              routerLinkActive="active"
+              style="cursor: pointer"
+              (click)="navigatePage('faq')"
+            >
+              <span class="nav-link-inner--text">Soalan Lazim</span>
+            </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="" target="_blank"> FAQs </a>
+
+          <li class="nav-item" style="cursor: pointer">
+            <a href="#" class="nav-link" target="_blank">Mengenai Kami</a>
           </li>
+          <!-- <li class="nav-item" style="cursor: pointer;">
+            <a
+              href="http://blog.creative-tim.com?ref=adpa-presentation-page"
+              class="nav-link"
+              target="_blank"
+              >Disclaimer</a 
+            >
+          </li> -->
           <!-- <li class="nav-item">
-            <a class="nav-link" href="" target="_blank"> License </a>
+            <a
+              href="https://www.creative-tim.com/license?ref=adpa-presentation-page"
+              class="nav-link"
+              target="_blank"
+              >License</a
+            >
           </li> -->
         </ul>
       </div>

@@ -2,7 +2,7 @@
   class="navbar navbar-main navbar-expand-lg navbar-dark headroom bg-default"
   id="navbar-main"
 >
-  <div class="container">
+  <div class="container-fluid">
     <a class="navbar-brand mr-lg-5" [routerLink]="['/home']">
       <img src="assets/img/logo/jata_negara.png" id="brand-logo" />
     </a>
@@ -39,9 +39,7 @@
               (click)="isCollapsed = !isCollapsed"
               id="navbar_global"
               type="button"
-            >
-              <span> </span> <span> </span>
-            </button>
+            ></button>
           </div>
         </div>
       </div>
@@ -64,37 +62,37 @@
           </a>
           <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
             <a class="dropdown-item" [routerLink]="['/agency/programs']">
-              <i class="ni ni-align-left-2 text-primary"> </i> Program
+               Program
             </a>
             <a class="dropdown-item">
-              <i class="ni ni-align-left-2 text-primary"> </i> MySPC
+               MySPC
             </a>
             <a class="dropdown-item">
-              <i class="ni ni-align-left-2 text-primary"> </i> Agensi
+               Agensi
               Perlindungan Sosial
             </a>
             <a class="dropdown-item" [routerLink]="['/agency/banner']">
-              <i class="ni ni-align-left-2 text-primary"> </i> Update Requests
+               Update Requests
             </a>
             <a class="dropdown-item" [routerLink]="['/agency/banner-request']">
-              <i class="ni ni-align-left-2 text-primary"> </i> Create Update
+               Create Update
               Request
             </a>
             <a class="dropdown-item" [routerLink]="['/agency/report']">
-              <i class="ni ni-align-left-2 text-primary"> </i> Report
+               Report
             </a>
             <a class="dropdown-item" [routerLink]="['/agency/request-data']">
-              <i class="ni ni-align-left-2 text-primary"> </i> Request Data
+               Request Data
             </a>
             <a class="dropdown-item" [routerLink]="['/agency/requested-data']">
-              <i class="ni ni-align-left-2 text-primary"> </i> Requested Data
+               Requested Data
               List
             </a>
             <a
               class="dropdown-item"
               [routerLink]="['/agency/search-individual-profile']"
             >
-              <i class="ni ni-align-left-2 text-primary"> </i> Search Individual
+               Search Individual
               Profile
             </a>
           </div>
@@ -112,22 +110,22 @@
           </a>
           <div aria-labelledby="navbarDropdownMenuLink" class="dropdown-menu">
             <a class="dropdown-item" [routerLink]="['/admin/program']">
-              <i class="ni ni-align-center text-info"> </i> Program
+              Program
             </a>
             <a class="dropdown-item" [routerLink]="['/admin/banner']">
-              <i class="ni ni-align-center text-info"> </i> Banner
+              Banner
             </a>
             <a class="dropdown-item" [routerLink]="['/admin/request-data']">
-              <i class="ni ni-align-center text-info"> </i> Request Data
+              Request Data
             </a>
             <a class="dropdown-item" [routerLink]="['/admin/user-management']">
-              <i class="ni ni-align-center text-info"> </i> User Management
+              User Management
             </a>
             <a class="dropdown-item" [routerLink]="['/admin/user']">
-              <i class="ni ni-align-center text-info"> </i> User
+              User
             </a>
             <a class="dropdown-item" [routerLink]="['/admin/user-add']">
-              <i class="ni ni-align-center text-info"> </i> Add User
+              Add User
             </a>
           </div>
         </li>
@@ -136,200 +134,154 @@
         id="menu"
         class="navbar-nav navbar-nav-hover align-items-lg-center ml-lg-auto"
       >
-        <li
-          class="parent cursor-pointer"
-          style="color: white"
-          [routerLink]="['/home']"
-        >
-          Utama
-        </li>
-
         <li class="parent">
-          <a href="#"> MySPC </a>
+          <a href="#"> Perlindungan Sosial </a>
 
           <!-- <a href="#">Fun Puzzle<span class="expand">»</span></a> -->
           <ul class="child">
-            <li>
-              <a href="#" nowrap
-                ><i class="ni ni-align-left-2 text-primary"> </i> Perutusan
-                Pengurusi</a
-              >
-            </li>
-            <li>
-              <a href="#" nowrap
-                ><i class="ni ni-align-left-2 text-primary"> </i> Latar
-                Belakang</a
-              >
-            </li>
-            <li>
-              <a href="#" nowrap
-                ><i class="ni ni-align-left-2 text-primary"> </i> Struktur</a
-              >
-            </li>
-
             <li class="parent">
-              <a href="#"
-                ><i class="ni ni-align-left-2 text-primary"> </i> Jawatan Kuasa
-                Kerja<span class="expand">»</span></a
-              >
+              <a href="#"> MySPC<span class="expand">»</span></a>
               <ul class="child">
+                <li>
+                  <a href="#" nowrap>Pengenalan</a>
+                </li>
+                <li>
+                  <a href="#" nowrap>Struktur</a>
+                </li>
                 <li class="parent">
-                  <a href="#">Bantuan Sosial<span class="expand">»</span></a>
+                  <a href="#"
+                    >Jawatankuasa Kerja<span class="expand">»</span></a
+                  >
                   <ul class="child">
                     <li>
-                      <a href="#" nowrap
-                        ><i class="ni ni-align-left-2 text-primary"> </i>
-                        Objektif</a
-                      >
+                      <a href="#" nowrap> Bantuan Sosial</a>
                     </li>
                     <li>
-                      <a href="#" nowrap
-                        ><i class="ni ni-align-left-2 text-primary"> </i>
-                        Skop</a
-                      >
+                      <a href="#" nowrap> Insurans Sosial</a>
                     </li>
                     <li>
-                      <a href="#" nowrap
-                        ><i class="ni ni-align-left-2 text-primary"> </i>
-                        Ahli</a
-                      >
+                      <a href="#" nowrap> Intervensi Pasaran Buruh</a>
+                    </li>
+                    <li>
+                      <a href="#" nowrap> Pengurusan Data</a>
                     </li>
                   </ul>
-                </li>
-
-                <li>
-                  <a href="#" nowrap
-                    ><i class="ni ni-align-left-2 text-primary"> </i> Insurans
-                    Sosial</a
-                  >
-                </li>
-                <li>
-                  <a href="#" nowrap
-                    ><i class="ni ni-align-left-2 text-primary"> </i> Intervensi
-                    Pasaran Buruh</a
-                  >
-                </li>
-                <li>
-                  <a href="#" nowrap
-                    ><i class="ni ni-align-left-2 text-primary"> </i> Pengurusan
-                    Data</a
-                  >
                 </li>
               </ul>
             </li>
             <li>
-              <a href="#" nowrap
-                ><i class="ni ni-align-left-2 text-primary"> </i>Siaran Media</a
-              >
+              <a href="#" nowrap> Program</a>
+            </li>
+            <li>
+              <a href="#" nowrap> Agensi Perlindungan Sosial</a>
             </li>
           </ul>
         </li>
 
         <li class="parent">
-          <a href="#">Perlindungan Sosial </a>
+          <a href="#">Pages</a>
           <ul class="child">
             <li>
-              <a>
-                <i class="ni ni-align-left-2 text-primary"> </i> Perlindungan
-                Sosial di Malaysia
-              </a>
+              <a [routerLink]="['/admin/program']"> Program </a>
             </li>
             <li>
-              <a> <i class="ni ni-align-left-2 text-primary"> </i> PDPS </a>
+              <a [routerLink]="['/admin/banner']"> Banner </a>
             </li>
             <li>
-              <a>
-                <i class="ni ni-align-left-2 text-primary"> </i> Senarai Agensi
-              </a>
-            </li>
-          </ul>
-        </li>
-
-        <li class="parent">
-          <a href="#">Admin</a>
-          <ul class="child">
-            <li>
-              <a [routerLink]="['/admin/program']">
-                <i class="ni ni-align-center text-info"> </i> Program
-              </a>
+              <a [routerLink]="['/admin/request-data']"> Request Data </a>
             </li>
             <li>
-              <a [routerLink]="['/admin/banner']">
-                <i class="ni ni-align-center text-info"> </i> Banner
-              </a>
+              <a [routerLink]="['/admin/user-management']"> User Management </a>
             </li>
             <li>
-              <a [routerLink]="['/admin/request-data']">
-                <i class="ni ni-align-center text-info"> </i> Request Data
-              </a>
+              <a [routerLink]="['/admin/user']"> User </a>
             </li>
             <li>
-              <a [routerLink]="['/admin/user-management']">
-                <i class="ni ni-align-center text-info"> </i> User Management
-              </a>
-            </li>
-            <li>
-              <a [routerLink]="['/admin/user']">
-                <i class="ni ni-align-center text-info"> </i> User
-              </a>
-            </li>
-            <li>
-              <a [routerLink]="['/admin/user-add']">
-                <i class="ni ni-align-center text-info"> </i> Add User
-              </a>
+              <a [routerLink]="['/admin/user-add']"> Add User </a>
             </li>
             <li>
               <a [routerLink]="['/admin/program-icu-admin']">
-                <i class="ni ni-align-left-2 text-primary"> </i> ICU Admin
-                Program
+                ICU Admin Program
               </a>
             </li>
             <li>
               <a [routerLink]="['/admin/banner-icu-admin']">
-                <i class="ni ni-align-left-2 text-primary"> </i> ICU Admin
-                Banner
+                ICU Admin Banner
               </a>
             </li>
             <li class="parent">
-              <a [routerLink]="['/agency/banner']">
-                <i class="ni ni-align-left-2 text-primary"> </i> Update Requests
-              </a>
+              <a [routerLink]="['/agency/banner']"> Update Requests </a>
             </li>
             <li>
               <a [routerLink]="['/agency/banner-request']">
-                <i class="ni ni-align-left-2 text-primary"> </i> Create Update
-                Request
+                Create Update Request
               </a>
             </li>
             <li>
-              <a [routerLink]="['/agency/report']">
-                <i class="ni ni-align-left-2 text-primary"> </i> Report
-              </a>
+              <a [routerLink]="['/agency/report']"> Report </a>
             </li>
             <li>
-              <a [routerLink]="['/agency/request-data']">
-                <i class="ni ni-align-left-2 text-primary"> </i> Request Data
-              </a>
+              <a [routerLink]="['/agency/request-data']"> Request Data </a>
             </li>
             <li>
               <a [routerLink]="['/agency/requested-data']">
-                <i class="ni ni-align-left-2 text-primary"> </i> Requested Data
-                List
+                Requested Data List
               </a>
             </li>
             <li>
               <a [routerLink]="['/agency/search-individual-profile']">
-                <i class="ni ni-align-left-2 text-primary"> </i> Search
-                Individual Profile
+                Search Individual Profile
               </a>
             </li>
           </ul>
         </li>
       </ul>
+      <span class="mr-4">
+        <select style="width: 150px; height: 38" placeholder="Pilih Fon">
+          <option>Pilih Fon</option>
+          <option>Times New Roman</option>
+          <option>Arial</option>
+        </select>
+      </span>
+      <span class="mr-4">
+        <input style="width: 150px; height: 28" placeholder="Cari" />
+      </span>
+      <span class="mt-1 mr-4">
+        <label class="custom-toggle">
+          <input type="checkbox" checked="" />
+          <span
+            class="custom-toggle-slider rounded-circle"
+            data-label-on="EN"
+            data-label-off="BM"
+          ></span>
+        </label>
+      </span>
+
+      <span class="mr-4">
+        <i class="ni ni-bell-55 text-white"></i>
+      </span>
+
+      <span class="avatar avatar-sm rounded-circle">
+        <img alt="Image placeholder" [src]="imgAvatar" />
+      </span>
     </div>
   </div>
 </nav>
-<div
+
+<!-- <div
+  class="container-fluid"
+  style="
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 10vh !important;
+  "
+>
+  <div class="row">
+    <div class="col text-left">qweqweqweq</div>
+  </div>
+</div> -->
+
+<!-- <div
   class="container-fluid"
   style="
     padding-left: 0 !important;
@@ -363,7 +315,200 @@
       </carousel>
     </div>
   </div>
-</div>
+</div> -->
+
+<header class="header-3 bg-dark">
+  <!-- <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute">
+    <div class="container">
+      <div class="navbar-translate">
+        <a class="navbar-brand" href="javascript:;"> Creative Tim </a>
+        <button
+          aria-controls="navbarSupportedContent"
+          aria-label="Toggle navigation"
+          class="navbar-toggler"
+          [attr.aria-expanded]="!isCollapsed"
+          (click)="isCollapsed = !isCollapsed"
+          id="example-header-3"
+          type="button"
+        >
+          <span class="navbar-toggler-icon"> </span>
+        </button>
+      </div>
+      <div
+        class="navbar-collapse"
+        [isAnimated]="true"
+        [collapse]="isCollapsed"
+        id="example-header-3"
+      >
+        <div class="navbar-collapse-header">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a> Argon <span> Design System PRO </span> </a>
+            </div>
+            <div class="col-6 collapse-close text-right">
+              <button
+                aria-controls="navigation-index"
+                aria-label="Toggle navigation"
+                class="navbar-toggler"
+                [attr.aria-expanded]="!isCollapsed"
+                (click)="isCollapsed = !isCollapsed"
+                id="example-header-3"
+                type="button"
+              >
+                <span> </span> <span> </span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:;"> Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:;"> About Us </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:;"> Contact Us </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+  <div class="page-header header-filter">
+    <div class="content-center">
+      <div class="row">
+        <div class="col-lg-5 col-md-8 col-12 mx-auto positioned">
+          <h4 class="title text-white text-uppercase ml-0">News</h4>
+          <div class="info info-horizontal ml-0">
+            <div
+              class="icon icon-shape bg-white shadow rounded-circle text-default"
+            >
+              <i class="ni ni-active-40"> </i>
+            </div>
+            <div class="description">
+              <h6 class="info-title text-uppercase text-white pl-0">
+                Connect with founders
+              </h6>
+              <p class="text-white opacity-8">
+                As we live, our hearts turn colder. Cause pain is what we go
+                through as we become older and we get insulted
+              </p>
+            </div>
+          </div>
+          <div class="info info-horizontal ml-0">
+            <div
+              class="icon icon-shape bg-white shadow rounded-circle text-default"
+            >
+              <i class="ni ni-trophy"> </i>
+            </div>
+            <div class="description">
+              <h6 class="info-title text-uppercase text-white pl-0">
+                Learn from experts
+              </h6>
+              <p class="text-white opacity-8">
+                We get back stabbed by friends. It becomes harder for us to give
+                others a hand. We get our heart broken by people we love.
+              </p>
+            </div>
+          </div>
+          <!-- <div class="info info-horizontal ml-0">
+            <div
+              class="icon icon-shape bg-white shadow rounded-circle text-default"
+            >
+              <i class="ni ni-paper-diploma"> </i>
+            </div>
+            <div class="description">
+              <h6 class="info-title text-uppercase text-white pl-0">
+                Get practical advice
+              </h6>
+              <p class="text-white opacity-8">
+                When we lose family over time. What else could rust the heart
+                more over time? Blackgold. It becomes harder...
+              </p>
+            </div>
+          </div> -->
+        </div>
+        <div class="col-md-12 col-md-6">
+          <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides" style="width: 100% !important">
+                <li class="glide__slide">
+                  <img
+                    height="400"
+                    [src]="slider1"
+                    (click)="navigatePage('agency/programs')"
+                    width="600"
+                  />
+                </li>
+                <li class="glide__slide">
+                  <img
+                    height="400"
+                    [src]="slider2"
+                    width="600"
+                    (click)="navigatePage('agency/programs')"
+                  />
+                </li>
+                <li class="glide__slide">
+                  <img
+                    height="400"
+                    [src]="slider3"
+                    (click)="navigatePage('agency/programs')"
+                    width="600"
+                  />
+                </li>
+                <li class="glide__slide">
+                  <img
+                    height="400"
+                    [src]="slider4"
+                    width="600"
+                    (click)="navigatePage('agency/programs')"
+                  />
+                </li>
+                <li class="glide__slide">
+                  <img
+                    height="400"
+                    src="assets/img/theme/doyoun-seo.jpg"
+                    width="600"
+                  />
+                </li>
+                <li class="glide__slide">
+                  <img
+                    height="400"
+                    src="assets/img/theme/sofia-kuniakina.jpg"
+                    width="600"
+                  />
+                </li>
+                <!-- <li class="glide__slide">
+                  <img
+                    height="400"
+                    src="assets/img/theme/ayo-ogunseinde.jpg"
+                    width="600"
+                  />
+                </li> -->
+              </ul>
+            </div>
+            <div class="glide__arrows" data-glide-el="controls">
+              <button
+                class="glide__arrow glide__arrow--left"
+                data-glide-dir="<"
+                aria-label="Previous"
+              >
+                <i class="ni ni-bold-left"> </i>
+              </button>
+              <button
+                class="glide__arrow glide__arrow--right"
+                data-glide-dir=">"
+                aria-label="Next"
+              >
+                <i class="ni ni-bold-right"> </i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
 
 <!-- <div
 class="col-lg-4 col-4 mr-auto text-left scollable"
